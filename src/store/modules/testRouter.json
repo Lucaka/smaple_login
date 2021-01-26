@@ -1,0 +1,20 @@
+{
+  "code": 0,
+  "message": "獲取權限成功",
+  "data": [
+    {
+      "name": "webchat",
+      "children" : [
+        {
+          "name": "chat"
+        },
+        {
+          "name": "room"
+        },
+        {
+          "name": "home"
+        }
+      ]
+    }
+  ]
+}
