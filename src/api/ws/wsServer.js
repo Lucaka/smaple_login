@@ -3,11 +3,13 @@ const express = require('express')
 const SocketServer = require('ws').Server
 
 //指定開啟的 port
-const PORT = 8088
+const PORT = 3000
+
+const CLINTS = {};
 
 //創建 express 的物件，並綁定及監聽 3000 port ，且設定開啟後在 console 中提示
 let server = express()
-    .listen(PORT, () => console.log(`Listening on ${PORT}`))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`))
 // server.listen(PORT, () => console.log(`Listening on ${PORT}`))
 //將 express 交給 SocketServer 開啟 WebSocket 的服務
 const wss = new SocketServer({ server })
@@ -26,21 +28,44 @@ wss.on('connection', ws => {
 
 
   ws.on('message', (e) => {
-    console.log( "Received Message: " + e);
+    console.log("Received Message: " + e);
+    const msg = JSON.parse(e);
+    switch (msg.type) {
+      case 'init':
+        CLINTS[msg.id] = ws;
+        break;
+      case 'send':
+        try {
+          CLINTS[msg.recipientId].send(JSON.stringify(msg));
+        } catch (error) {
+          console.log('send message error', error)
+        }
 
+        break;
+
+      case 'global':
+        console.log('global');
+        Object.keys(CLINTS).forEach(client => {
+          CLINTS[client].send(JSON.stringify(msg));
+        })
+        break;
+
+      default:
+        break;
+    }
     // let msg = JSON.parse(e.data);
 
-    ws.send(e)
+
 
   });
 
-  //取得所有連接中的 client
-  let clients = wss.clients;
+  // //取得所有連接中的 client
+  // let clients = wss.clients;
 
-  //做迴圈，發送訊息至每個 client
-  clients.forEach(client => {
-    console.log( "clients " + client);
-  })
+  // //做迴圈，發送訊息至每個 client
+  // clients.forEach(client => {
+  //   console.log( "clients " + client);
+  // })
 
 
 })

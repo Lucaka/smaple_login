@@ -1,6 +1,6 @@
 {
   mode: 'development',
-  context: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae',
+  context: 'C:\\codind\\webstorm\\smaple_login',
   node: {
     setImmediate: false,
     process: 'mock',
@@ -11,14 +11,14 @@
     child_process: 'empty'
   },
   output: {
-    path: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\dist',
+    path: 'C:\\codind\\webstorm\\smaple_login\\dist',
     filename: 'js/[name].js',
     publicPath: '',
     chunkFilename: 'js/[name].js'
   },
   resolve: {
     alias: {
-      '@': 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\src',
+      '@': 'C:\\codind\\webstorm\\smaple_login\\src',
       vue$: 'vue/dist/vue.runtime.esm.js'
     },
     extensions: [
@@ -31,17 +31,17 @@
     ],
     modules: [
       'node_modules',
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules',
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\@vue\\cli-service\\node_modules'
+      'C:\\codind\\webstorm\\smaple_login\\node_modules',
+      'C:\\codind\\webstorm\\smaple_login\\node_modules\\@vue\\cli-service\\node_modules'
     ]
   },
   resolveLoader: {
     modules: [
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\@vue\\cli-plugin-eslint\\node_modules',
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\@vue\\cli-plugin-babel\\node_modules',
+      'C:\\codind\\webstorm\\smaple_login\\node_modules\\@vue\\cli-plugin-eslint\\node_modules',
+      'C:\\codind\\webstorm\\smaple_login\\node_modules\\@vue\\cli-plugin-babel\\node_modules',
       'node_modules',
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules',
-      'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\@vue\\cli-service\\node_modules'
+      'C:\\codind\\webstorm\\smaple_login\\node_modules',
+      'C:\\codind\\webstorm\\smaple_login\\node_modules\\@vue\\cli-service\\node_modules'
     ]
   },
   module: {
@@ -55,8 +55,8 @@
           {
             loader: 'cache-loader',
             options: {
-              cacheDirectory: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '6e6f50c2'
+              cacheDirectory: 'C:\\codind\\webstorm\\smaple_login\\node_modules\\.cache\\vue-loader',
+              cacheIdentifier: '5f8bd56d'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -66,8 +66,8 @@
               compilerOptions: {
                 whitespace: 'condense'
               },
-              cacheDirectory: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '6e6f50c2'
+              cacheDirectory: 'C:\\codind\\webstorm\\smaple_login\\node_modules\\.cache\\vue-loader',
+              cacheIdentifier: '5f8bd56d'
             }
           }
         ]
@@ -1059,8 +1059,8 @@
           {
             loader: 'cache-loader',
             options: {
-              cacheDirectory: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\.cache\\babel-loader',
-              cacheIdentifier: '2afe7def'
+              cacheDirectory: 'C:\\codind\\webstorm\\smaple_login\\node_modules\\.cache\\babel-loader',
+              cacheIdentifier: '00f8b00c'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
@@ -1075,7 +1075,7 @@
         test: /\.(vue|(j|t)sx?)$/,
         exclude: [
           /node_modules/,
-          'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\@vue\\cli-service\\lib'
+          'C:\\codind\\webstorm\\smaple_login\\node_modules\\@vue\\cli-service\\lib'
         ],
         use: [
           /* config.module.rule('eslint').use('eslint-loader') */
@@ -1088,10 +1088,10 @@
                 '.vue'
               ],
               cache: true,
-              cacheIdentifier: 'ebc0782a',
+              cacheIdentifier: '26c66386',
               emitWarning: false,
               emitError: false,
-              eslintPath: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\node_modules\\eslint',
+              eslintPath: 'C:\\codind\\webstorm\\smaple_login\\node_modules\\eslint',
               formatter: function (results) {
                   let errors = 0;
                   let warnings = 0;
@@ -1124,7 +1124,7 @@
       {
         test: /\.svg$/,
         include: [
-          'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\src\\assets\\svg'
+          'C:\\codind\\webstorm\\smaple_login\\src\\assets\\svg'
         ],
         use: [
           /* config.module.rule('svg-sprite-loader').use('svg-sprite-loader') */
@@ -1242,7 +1242,7 @@
             }
           }, resolveClientEnv(options, true /* raw */))
         },
-        template: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\public\\index.html'
+        template: 'C:\\codind\\webstorm\\smaple_login\\public\\index.html'
       }
     ),
     /* config.plugin('preload') */
@@ -1267,8 +1267,8 @@
     new CopyPlugin(
       [
         {
-          from: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\public',
-          to: 'C:\\Users\\user\\.WebStorm2019.1\\vuegame\\vuetest\\gmae\\dist',
+          from: 'C:\\codind\\webstorm\\smaple_login\\public',
+          to: 'C:\\codind\\webstorm\\smaple_login\\dist',
           toType: 'dir',
           ignore: [
             '.DS_Store',

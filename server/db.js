@@ -6,17 +6,25 @@ mongoose.connect('mongodb+srv://chitahoros:s0955651709@cluster0-kqbzu.gcp.mongod
 
 // 为这次连接绑定事件
 const db = mongoose.connection;
-db.once('error',() => console.log('Mongo connection error'));
-db.once('open',() => console.log('Mongo connection successed'));
+db.once('error', () => console.log('Mongo connection error'));
+db.once('open', () => console.log('Mongo connection successed'));
 /************** 定义模式loginSchema **************/
+// 登入資訊
 const loginSchema = mongoose.Schema({
-  account : String,
-  password : String
+  account: String,
+  password: String
+});
+
+// 未讀訊息
+const messageSchema = mongoose.Schema({
+  userId: String,
+  message: Array,
 });
 
 /************** 定义模型Model **************/
 const Models = {
-  Login : mongoose.model('Login',loginSchema)
+  Login: mongoose.model('Login', loginSchema),
+  Message: mongoose.model('Message', messageSchema),
 }
 
 module.exports = Models;

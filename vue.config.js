@@ -38,6 +38,7 @@ module.exports = {
         })
 
     let fs = require('fs');
+    // eslint-disable-next-line no-undef
     fs.writeFile('chainWebpack.txt', config.toString(), err = () => {})
   }
 }

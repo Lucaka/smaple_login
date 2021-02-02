@@ -1,9 +1,9 @@
 // 引入编写好的api
 const api = require('./api');
 // 引入文件模块
-const fs = require('fs');
+// const fs = require('fs');
 // 引入处理路径的模块
-const path = require('path');
+// const path = require('path');
 // 引入处理post数据的模块
 const bodyParser = require('body-parser')
 // 引入Express
@@ -11,7 +11,7 @@ const express = require('express');
 const server = express();
 
 server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({extended: false}));
+server.use(bodyParser.urlencoded({ extended: false }));
 server.use(api);
 // 访问静态资源文件 这里是访问所有dist目录下的静态资源文件
 // server.use(express.static(path.resolve(__dirname, '../dist')))
@@ -22,7 +22,7 @@ server.use(api);
 // })
 
 const PORT = 8088
-server.listen(PORT,() => console.log(`Listening on ${PORT}`))
+server.listen(PORT, () => console.log(`Listening on ${PORT}`))
 console.log('success listen…………');
 
 

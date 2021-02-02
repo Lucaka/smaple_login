@@ -1,24 +1,25 @@
-import { getToken,setToken,removeToken } from '../../api/cookiesex'
+import { getToken, setToken, removeToken } from '../../api/cookiesex'
 
 const state = {
-  userToken: getToken('token') ? getToken('token') : null
+  userToken: getToken('tokenID') ? getToken('tokenID') : null
 }
 
 const mutations = {
-  USER_LOGIN(state) {
-    setToken('token','HIHI')
+  USER_LOGIN(state, ID) {
+    setToken('tokenID', ID);
 
-    state.userToken = 'HIHI'
+    state.userToken = ID;
   },
   USER_LOGOUT(state) {
-    removeToken('token')
+    removeToken('tokenID')
 
     state.userToken = null
+    location.reload();
   }
 };
 
 
-const actions =  {
+const actions = {
 };
 
 export default {

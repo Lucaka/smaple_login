@@ -34,7 +34,7 @@
     name: "index.vue",
     created () {
       this.getRequest('http://www.udp3c.com.tw:9999/UDPWebAPI/api/Service/GetSearchCriteria').then(res => {
-        console.log(res.data.result)
+        // console.log(res.data.result)
         this.SearchCriteria = res.data.result
       })
     },

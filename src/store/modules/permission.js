@@ -3,7 +3,7 @@ import testRouter from './testRouter'
 // 全部的route
 import allRouter from '@/router/allRouter'
 // login和沒有權限的route
-import router,{ DynamicRoutes } from '@/router'
+import router, { DynamicRoutes } from '@/router'
 // 判斷權限
 import { recursionRouter } from '@/utils/recursionRouter'
 
@@ -15,11 +15,14 @@ const mutations = {
   SET_PERMISSION(state, routes) {
     state.permissionRouter = routes
   },
+  REMOVE_PERMISSION(state) {
+    state.permissionRouter = null
+  }
 }
 
 
-const actions =  {
-  queryPermission: function ({commit}) {
+const actions = {
+  queryPermission: function ({ commit }) {
 
     //查詢使用者權限
     let permissionList = testRouter
@@ -31,7 +34,7 @@ const actions =  {
 
 
     // eslint-disable-next-line no-console
-    console.log([...routes])
+    console.log('queryPermission', [...routes])
 
     // 動態增加router
     router.addRoutes(DynamicRoutes)
